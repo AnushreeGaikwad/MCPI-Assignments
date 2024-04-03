@@ -29,6 +29,7 @@
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
 #endif
 
+int count=1;
 int main(void)
 {
 	char str[20];

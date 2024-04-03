@@ -29,27 +29,27 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  12 .ARM.attributes 00000030  00000000  00000000  00003054  2**0
                   CONTENTS, READONLY
- 13 .debug_info   00001946  00000000  00000000  00003084  2**0
+ 13 .debug_info   00001958  00000000  00000000  00003084  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 0000074f  00000000  00000000  000049ca  2**0
+ 14 .debug_abbrev 00000762  00000000  00000000  000049dc  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_aranges 00000148  00000000  00000000  00005120  2**3
+ 15 .debug_aranges 00000148  00000000  00000000  00005140  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_rnglists 000000d7  00000000  00000000  00005268  2**0
+ 16 .debug_rnglists 000000d7  00000000  00000000  00005288  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  00018666  00000000  00000000  0000533f  2**0
+ 17 .debug_macro  00018666  00000000  00000000  0000535f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00001e03  00000000  00000000  0001d9a5  2**0
+ 18 .debug_line   00001e03  00000000  00000000  0001d9c5  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    0008c39c  00000000  00000000  0001f7a8  2**0
+ 19 .debug_str    0008c39c  00000000  00000000  0001f7c8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000043  00000000  00000000  000abb44  2**0
+ 20 .comment      00000043  00000000  00000000  000abb64  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  00000848  00000000  00000000  000abb88  2**2
+ 21 .debug_frame  00000848  00000000  00000000  000abba8  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_loclists 0000001f  00000000  00000000  000ac3d0  2**0
+ 22 .debug_loclists 0000001f  00000000  00000000  000ac3f0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 23 .debug_line_str 0000005c  00000000  00000000  000ac3ef  2**0
+ 23 .debug_line_str 0000005c  00000000  00000000  000ac40f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -370,10 +370,10 @@ void LedBlink(uint32_t pin, uint32_t delay) {
  80003f6:	bd80      	pop	{r7, pc}
 
 080003f8 <main>:
-#if !defined(__SOFT_FP__) && defined(__ARM_FP)
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
 #endif
 
+int count=1;
 int main(void)
 {
  80003f8:	b580      	push	{r7, lr}

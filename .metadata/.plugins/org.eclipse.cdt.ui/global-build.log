@@ -1,14 +1,42 @@
-09:20:56 **** Incremental Build of configuration Debug for project Day11_1 ****
+12:28:59 **** Incremental Build of configuration Debug for project Day10_3 ****
 make -j4 all 
-arm-none-eabi-size  Day11_1.elf 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:39:33: warning: implicit declaration of function 'Delay'; did you mean 'DelayMs'? [-Wimplicit-function-declaration]
+   39 |                                 Delay(100);
+      |                                 ^~~~~
+      |                                 DelayMs
+arm-none-eabi-gcc -o "Day10_3.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/anushree/Desktop/git/MCPI-Assignments/Day10_3/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Day10_3.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+/opt/st/stm32cubeide_1.15.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld: ./Src/main.o: in function `main':
+/home/anushree/Desktop/git/MCPI-Assignments/Day10_3/Debug/../Src/main.c:39: undefined reference to `Delay'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:63: Day10_3.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:29:40 **** Incremental Build of configuration Debug for project Day10_3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:39:33: warning: implicit declaration of function 'Delayms'; did you mean 'DelayMs'? [-Wimplicit-function-declaration]
+   39 |                                 Delayms(100);
+      |                                 ^~~~~~~
+      |                                 DelayMs
+arm-none-eabi-gcc -o "Day10_3.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/anushree/Desktop/git/MCPI-Assignments/Day10_3/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Day10_3.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+/opt/st/stm32cubeide_1.15.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld: ./Src/main.o: in function `main':
+/home/anushree/Desktop/git/MCPI-Assignments/Day10_3/Debug/../Src/main.c:39: undefined reference to `Delayms'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:63: Day10_3.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+12:30:31 **** Incremental Build of configuration Debug for project Day10_3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Day10_3.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/anushree/Desktop/git/MCPI-Assignments/Day10_3/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Day10_3.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Day10_3.elf
+ 
+arm-none-eabi-size  Day10_3.elf 
+arm-none-eabi-objdump -h -S Day10_3.elf  > "Day10_3.list"
    text	   data	    bss	    dec	    hex	filename
-   1380	      8	   1568	   2956	    b8c	Day11_1.elf
+   4216	     84	   1900	   6200	   1838	Day10_3.elf
 Finished building: default.size.stdout
  
-09:21:05 **** Incremental Build of configuration Debug for project Day11_1 ****
-make -j4 all 
-arm-none-eabi-size  Day11_1.elf 
-   text	   data	    bss	    dec	    hex	filename
-   1380	      8	   1568	   2956	    b8c	Day11_1.elf
-Finished building: default.size.stdout
+Finished building: Day10_3.list
  

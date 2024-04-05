@@ -1,0 +1,17 @@
+12:30:31 **** Incremental Build of configuration Debug for project Day10_3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Day10_3.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/anushree/Desktop/git/MCPI-Assignments/Day10_3/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Day10_3.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Day10_3.elf
+ 
+arm-none-eabi-size  Day10_3.elf 
+arm-none-eabi-objdump -h -S Day10_3.elf  > "Day10_3.list"
+   text	   data	    bss	    dec	    hex	filename
+   4216	     84	   1900	   6200	   1838	Day10_3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Day10_3.list
+ 
+
+12:30:31 Build Finished. 0 errors, 0 warnings. (took 325ms)
+

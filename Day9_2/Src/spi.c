@@ -2,7 +2,7 @@
  * spi.c
  *
  *  Created on: Apr 3, 2024
- *      Author: Ghanshyam
+ *
  */
 
 #include "spi.h"
